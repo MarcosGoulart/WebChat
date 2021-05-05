@@ -1,4 +1,4 @@
-<style type='text/css'>
+ <style type='text/css'>
 	.embeddedServiceHelpButton.helpButton.uiButton {
 		background-color: #005290;
 		font-family: "Arial", sans-serif;
@@ -10,15 +10,28 @@
 
 <html>
     <body>
-		<button class="embeddedServiceHelpButton helpButton uiButton" onclick="initESW('https://service.force.com')">Chat</button>
+		<a id="liveagent_button_online_5735Y000000oyjs" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5735Y000000oyjs')"><!-- Online Chat Content --></a><div id="liveagent_button_offline_5735Y000000oyjs" style="display: none;"><!-- Offline Chat Content --></div>
+		<!--<button class="embeddedServiceHelpButton helpButton uiButton" onclick="initESW('https://service.force.com')">Chat</button>-->
     </body>
 
 </html>
 
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript' src='https://c.la3-c2-ia4.salesforceliveagent.com/content/g/js/51.0/deployment.js'></script>
+<script type='text/javascript'>
+	liveagent.init('https://d.la3-c2-ia4.salesforceliveagent.com/chat', '5725Y000000oyIy', '00D5Y0000024iD6');
+</script>
+<script type="text/javascript">
+	if (!window._laq) { window._laq = []; }
+	window._laq.push(function(){liveagent.showWhenOnline('5735Y000000oyjs', document.getElementById('liveagent_button_online_5735Y000000oyjs'));
+	liveagent.showWhenOffline('5735Y000000oyjs', document.getElementById('liveagent_button_offline_5735Y000000oyjs'));
+	});
+</script>
+
+
+
+<!--<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		console.log('entrou aqui: ' + gslbBaseURL);
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
@@ -67,4 +80,6 @@
 	} else {
 		initESW('https://service.force.com');
 	}
-</script>
+</script> -->
+
+
